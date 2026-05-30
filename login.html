@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Login Admin</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    :root{
+      --bg:#1a1a1a;
+      --card:#2a2a2a;
+      --accent:#2bbfaa;
+      --accent-hover:#23a896;
+      --text:#ffffff;
+      --border:#333;
+    }
+
+    body{
+      min-height:100vh;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      background:var(--bg);
+
+      font-family:'Barlow', sans-serif;
+
+      padding:20px;
+    }
+
+    .login-box{
+      width:100%;
+      max-width:420px;
+
+      background:var(--card);
+
+      border:1px solid var(--border);
+
+      border-radius:16px;
+
+      padding:35px 30px;
+
+      box-shadow:0 0 20px rgba(0,0,0,0.3);
+    }
+
+    .logo{
+      text-align:center;
+
+      margin-bottom:25px;
+    }
+
+    .logo img{
+      width: 200px;
+
+      margin:0 auto 15px;
+    }
+
+    .logo h1{
+      color:var(--text);
+
+      font-size:1.8rem;
+      font-weight:800;
+    }
+
+    .logo p{
+      color:#aaa;
+
+      margin-top:6px;
+
+      font-size:0.95rem;
+    }
+
+    .input-group{
+      margin-bottom:18px;
+    }
+
+    .input-group input{
+      width:100%;
+
+      padding:14px;
+
+      border:none;
+      outline:none;
+
+      border-radius:10px;
+
+      background:#1f1f1f;
+
+      color:white;
+
+      font-size:15px;
+
+      border:1px solid transparent;
+
+      transition:0.2s;
+    }
+
+    .input-group input:focus{
+      border-color:var(--accent);
+    }
+
+    button{
+      width:100%;
+
+      padding:14px;
+
+      border:none;
+      border-radius:10px;
+
+      background:var(--accent);
+
+      color:white;
+
+      font-size:15px;
+      font-weight:700;
+
+      cursor:pointer;
+
+      transition:0.2s;
+    }
+
+    button:hover{
+      background:var(--accent-hover);
+    }
+
+    .footer-text{
+      margin-top:18px;
+
+      text-align:center;
+
+      color:#888;
+
+      font-size:0.85rem;
+    }
+
+    @media(max-width:500px){
+
+      .login-box{
+        padding:30px 20px;
+      }
+
+      .logo h1{
+        font-size:1.5rem;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="login-box">
+
+    <div class="logo">
+
+      <img
+        src="img/logo.png"
+        alt="Logo Igreja"
+      >
+
+      <h1>Painel Admin</h1>
+
+      <p>
+        Igreja Batista Alto Village
+      </p>
+
+    </div>
+
+    <div class="input-group">
+
+      <input
+        type="email"
+        id="email"
+        placeholder="Digite seu email"
+      >
+
+    </div>
+
+    <div class="input-group">
+
+      <input
+        type="password"
+        id="senha"
+        placeholder="Digite sua senha"
+      >
+
+    </div>
+
+    <button onclick="login()">
+      Entrar
+    </button>
+
+    <p class="footer-text">
+      Sistema Administrativo da Igreja
+    </p>
+
+  </div>
+
+  <script type="module" src="js/login.js"></script>
+
+</body>
+</html>
